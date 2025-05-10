@@ -1,7 +1,16 @@
-#include<stdio.h>;
-#include<dirent.h> ; 
-struct dirent *p1 ;
-int main (){
-    DIR*p1 ;
-    p1 = opendir("./home");
+#include <stdio.h>
+#include<dirent.h>
+struct dirent *a ;
+int main() {
+   DIR *b ;
+   b = opendir("./home");
+   if(b == NULL){
+       perror("File not found");
+       return 1 ;
+   }
+   while ((a = readdir(b)) != NULL){
+       printf("%s\n",a ->d_name);
+   }
+   closedir(b) ;
+   return 1 ;
 }
