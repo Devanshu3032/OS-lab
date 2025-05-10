@@ -7,7 +7,7 @@ int main()
     dirp = opendir("./hme");
     if (dirp == NULL)
     {
-        perror("lund la");
+        perror("Homm not found ");
         return 1;
     }
     while ((dptr = readdir(dirp)) != NULL)
