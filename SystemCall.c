@@ -1,19 +1,16 @@
 #include<stdio.h>
 #include<dirent.h>
-struct dirent *dptr ;
-int main()
-{
-    DIR *dirp;
-    dirp = opendir("./hme");
-    if (dirp == NULL)
-    {
-        perror("Homm not found ");
-        return 1;
+struct dirent *a ;
+int main(){
+    DIR *b ;
+    b = opendir("./home");
+    if(b = NULL){
+        perror("ERROR PROCESS EXECUTION");
+        return 1 ;
     }
-    while ((dptr = readdir(dirp)) != NULL)
-    {
-        printf("%s\n", dptr->d_name);
+    while((a = readdir(b)) != 0 ){
+        printf("%s\n",a ->d_name);
     }
-    closedir(dirp);
-    return 0;
+    closedir(b);
+    return 1 ;
 }
