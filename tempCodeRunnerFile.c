@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<unistd.h>
- int main (){
+main (){
     int a , b ,c ; 
     a = fork();
     if(a == -1){
