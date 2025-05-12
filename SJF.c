@@ -5,5 +5,10 @@ int  main(){
     scanf("%d",&n);
     int bt[n], wt[n],tat[n],p[n];
     float t_tat = 0 ; float t_wt = 0 ;
-    printf("")
+    printf("Enter burst times:\n");
+    for(i = 0 ; i < n  ; i++){
+        printf("P%d : ", i+1);
+        scanf("%d",&bt[i]);
+        p[i] = i+1 ;
+    }
 }
