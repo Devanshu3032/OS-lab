@@ -2,4 +2,8 @@
 int  main(){
     int n , i , j ,temp;
     printf("Enter number of processes: ");
+    scanf("%d",&n);
+    int bt[n], wt[n],tat[n],p[n];
+    float t_tat = 0 ; float t_wt = 0 ;
+    printf("")
 }
