@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "pthread.h"
+#include<pthread.h>
 #include<unistd.h>
 void *thread_function1(void *arg){
     for(int i = 0  ; i <5 ; i++){
