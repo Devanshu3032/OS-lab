@@ -39,6 +39,12 @@ int  main(){
             t_tat += tat[i] ;
             t_wt += wt[i] ; 
         }
+
+        printf("\nProcess\tBT\tWT\tTAT\n");
+        for(i = 0 ; i < n ; i++){
+            printf("P%d\t%d\t%d\t%d\n",p[i],bt[i],wt[i],tat[i]);
+        }
+        printf("\nAverage Waiting Time: %.2f",t_wt/n);
         
         
     }
