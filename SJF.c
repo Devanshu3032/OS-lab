@@ -10,5 +10,30 @@ int  main(){
         printf("P%d : ", i+1);
         scanf("%d",&bt[i]);
         p[i] = i+1 ;
+
+        for ( i = 0; i < n; i++)
+        {
+           for (j = 0; j < n; i++)
+           {
+            if(bt[i] > bt[j]){
+                temp = bt[i] ;
+                bt[i] = bt[j] ;
+                bt[j] = temp ;
+
+                temp = p[i];
+                p[i ] = p[j] ; 
+                p[j] = temp ; 
+            }
+           }
+           
+        }
+
+        wt[0] = 0 ; 
+        for ( i = 1; i < n; i++)
+        {
+           
+        }
+        
+        
     }
 }
