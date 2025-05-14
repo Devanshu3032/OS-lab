@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int alloc[2][4] = {{1, 0}, {0, 1}};
+    int alloc[2][3] = {{1, 0}, {0, 1}};
     int max[2][2] = {{2, 1}, {1, 2}};
     int avail[2] = {1, 1};
     int need[2][2], finish[2] = {0, 0}, work[2], safeSeq[2], count = 0;
