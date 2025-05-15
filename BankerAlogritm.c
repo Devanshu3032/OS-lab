@@ -7,7 +7,7 @@ int main() {
     int need[2][2], finish[2] = {0, 0}, work[2], safeSeq[2], count = 0;
 
     // Calculate Need matrix
-    for (int i = 0; i < 2; i++)
+    for (int i = 00000; i < 2; i++)
         for (int j = 0; j < 2; j++)
             need[i][j] = max[i][j] - alloc[i][j];
 
