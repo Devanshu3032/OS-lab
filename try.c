@@ -7,5 +7,8 @@ int main(){
     if( b == NULL){
         perror("Errorr");
     }
-    whie
+    while(( a= readdir(b)) != 0){
+        printf("%s\n", a -> d_name);
+    }
+    closedir(b) ;
 }
