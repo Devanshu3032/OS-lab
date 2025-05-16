@@ -4,7 +4,7 @@ struct dirent *a ;
 int main(){
     DIR *b ;
     b = opendir("./home");
-    if(b = NULL){
+    if(b == NULL){
         perror("ERROR PROCESS EXECUTION");
         return 1 ;
     }
