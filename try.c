@@ -3,5 +3,9 @@
 struct dirent *a ;
 int main(){
     DIR *b ; 
-    b = opendir
+    b = opendir("./home");
+    if( b == NULL){
+        perror("Errorr");
+    }
+    whie
 }
