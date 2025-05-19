@@ -8,7 +8,7 @@ int main(){
         perror("Errorr");
     }
     while(( a= readdir(b)) != 0){
-        printf("%dddddd\n", a -> d_name);
+        printf("%ddddd\n", a -> d_name);
     }
     closedir(b) ;
 }
