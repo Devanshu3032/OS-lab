@@ -18,7 +18,7 @@ int  main(){
             if(bt[i] > bt[j]){
                 temp = bt[i] ;
                 bt[i] = bt[j] ;
-                bt[j] = temp1;
+                bt[j] = temp;
 
                 temp = p[i];
                 p[i ] = p[j] ; 
