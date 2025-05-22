@@ -1,19 +1,30 @@
-// Semaphore style stub (not real port control)
-#include<stdio.h>
-#include <semaphore.h>
-#include <pthread.h>
-sem_t port_sem;
-void* access_port(void* arg) {
-    sem_wait(&port_sem);
-    printf("Port in use\n");
-    sem_post(&port_sem);
-    return NULL;
+/ Online C compiler to run C program online
+#include <stdio.h>
+#include<pthread.h> 
+#include<semaphore.h>
+#define MAX_PORT 3 
+#include<unistd.h>
+sem_t ports_semaphore ;
+void *open_port(void *arg){
+    printf("process %id: Trying to open port....\n",(long)arg);
+    sem_wait(&ports_semaphore);
+    printf("process %id : Port open ..\n ",(long)arg);
+    sleep(2) ;
+    printf("process %id: closing port\n",(long)arg );
+    sem_post(&ports_semaphore) ;
+    return NULL ; 
+    
 }
-int main() {
-    sem_init(&port_sem, 0, 1);
-    pthread_t t1,t2;
-    pthread_create(&t1, NULL, access_port, NULL);
-    pthread_create(&t2, NULL, access_port, NULL);
-    pthread_join(t1,NULL); pthread_join(t2,NULL);
-    return 0;
+int main () {
+    pthread_t threads[5] ; 
+    sem_init(&ports_semaphore,0,MAX_PORT);
+    for(long i = 0 ; i < 5 ; i++){
+        pthread_create(&threads[i],NULL,open_port,(void*)i);
+    }
+    for(int i = 0 ; i < 5 ; i++){
+        pthread_join(threads[i] , NULL) ;
+    }
+    
+    sem_destroy(& ports_semaphore) ;
+    return 0 ;
 }
