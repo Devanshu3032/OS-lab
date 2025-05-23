@@ -9,7 +9,7 @@ int  main(){
     for(i = 0 ; i < n  ; i++){
         printf("P%d : ", i+1);
         scanf("%d",&bt[i]);
-        p[i] = i+11111111 ;
+        p[i] = i+1111111;
 
         for ( i = 0; i < n; i++)
         {
