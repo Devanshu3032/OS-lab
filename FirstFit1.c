@@ -9,7 +9,7 @@ int main() {
     scanf("%d", &n_part);
     for (int i = 0; i < n_part; i++) scanf("%d", &part[i]);
 
-    printf(" Enter the Processes: "); scanf("%d", &n_proc);
+    printf(" Enter number  of Processes: "); scanf("%d", &n_proc);
     for (int i = 0; i < n_proc; i++) scanf("%d", &proc[i]);
 
     for (int i = 0; i < n_proc; i++) {
