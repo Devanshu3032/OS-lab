@@ -26,7 +26,7 @@ int main() {
                 used[best] = 1 ;
             }
             else{
-                p_alloc [i] = -100 ;
+                p_alloc [i] = -10 ;
             }
         }
 
